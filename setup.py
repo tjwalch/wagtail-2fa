@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 
 install_requires = [
     "Django>=3.2",
-    "Wagtail>=2.15",
+    "Wagtail>=5.2",
     "django-otp>=0.8.1",
     "six>=1.14.0",
     "qrcode>=6.1",
@@ -25,6 +25,7 @@ tests_require = [
     "isort==5.9.3",
     "flake8-blind-except==0.2.0",
     "flake8-debugger==4.0.0",
+    "wagtail-modeladmin==2.0.0"
 ]
 
 with open("README.rst") as fh:
@@ -34,7 +35,7 @@ with open("README.rst") as fh:
 
 setup(
     name="wagtail-2fa",
-    version="1.6.3",
+    version="1.6.9",
     description="Two factor authentication for Wagtail",
     long_description=long_description,
     url="https://github.com/LabD/wagtail-2fa",
@@ -46,7 +47,7 @@ setup(
         "docs": docs_require,
         "test": tests_require,
     },
-    python_requires=">=3.7",
+    python_requires=">=3.8",
     use_scm_version=True,
     entry_points={},
     package_dir={"": "src"},
@@ -58,13 +59,18 @@ setup(
         "Environment :: Web Environment",
         "Framework :: Django",
         "Framework :: Django :: 3.2",
-        "Framework :: Django :: 4.0",
+        "Framework :: Django :: 4.2",
+        "Framework :: Django :: 5.0",
+        "Framework :: Wagtail",
+        "Framework :: Wagtail :: 5",
+        "Framework :: Wagtail :: 6",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
     ],
     zip_safe=False,
 )
